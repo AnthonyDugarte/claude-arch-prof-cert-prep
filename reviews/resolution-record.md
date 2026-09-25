@@ -28,7 +28,7 @@ Date: 2026-09-24. Independent reports are preserved as findings against the vers
 |---|---|
 | Build preparation material from supplied Professional guide | Seven modules map all 38 detailed objectives; coverage map plus independent reviewer inspection against the original guide |
 | Dedicated search for each section | `research/guide-sections.md` has 16 actual queries and outcomes; three domain research logs have additional dedicated technical queries |
-| Researcher, reviewer, validator and adversarial reviewer | Separate researcher outputs and three independent reports; role/model table in CONSOLIDATION.md |
+| Researcher, reviewer, validator and adversarial reviewer | Separate researcher outputs and three independent reports; role/model table in [PROVENANCE.md](../PROVENANCE.md) |
 | Do not use Astra for every subagent | Sol researchers/reviewer/validator and Luna researcher, alongside inherited researcher and Astra adversarial reviewer |
 | Find preparation resources | Orientation links official Professional path, public Academy catalog/syllabus and technical readings; access limits in guide register |
 | Define concepts with example situations | Explicit objective sections, scenario comparisons, worked calculations and original decision practice in each module |
