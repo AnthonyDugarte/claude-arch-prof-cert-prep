@@ -91,60 +91,84 @@ Common failures include interviewing only the sponsor; turning a vague wish dire
 
 These questions are original study exercises, not official exam items.
 
-**1. Select ONE.** A director asks for “a chatbot that gets claim decisions right.” Which discovery response is strongest?
+**1. Select ONE.**
 
-A. Select the largest model and benchmark it against public QA data.  
-B. Ask which users and decisions are in scope, quantify error impact, define success measures and human authority, then test representative cases.  
-C. Commit to 99.99% API availability as the definition of “right.”  
-D. Ask the vendor to define accuracy after implementation.
+A director asks for “a chatbot that gets claim decisions right.” Which discovery response is strongest?
 
-**Answer: B.** It makes the problem, consequences, workflow, and evidence concrete before prescribing a solution. A’s benchmark may not represent the claims task; C measures service availability rather than decision quality; D delegates requirements to a party without the business context.
+- **A.** Select the largest model and benchmark it against public QA data.
+- **B.** Ask which users and decisions are in scope, quantify error impact, define success measures and human authority, then test representative cases.
+- **C.** Commit to 99.99% API availability as the definition of “right.”
+- **D.** Ask the vendor to define accuracy after implementation.
 
-**2. Select TWO.** A durable architecture choice between live policy retrieval and a static prompt copy must be reviewed by developers and compliance. Which two actions best support that review?
+**Answer: B.**
 
-A. Record the decision, rationale, alternatives, consequences, status, and reconsideration trigger in an ADR.  
-B. Share a data-flow view showing source, access boundary, freshness, and model context.  
-C. Send only a cost estimate because compliance can infer data movement.  
-D. Wait until production and reconstruct why the design was chosen.
+It makes the problem, consequences, workflow, and evidence concrete before prescribing a solution. A’s benchmark may not represent the claims task; C measures service availability rather than decision quality; D delegates requirements to a party without the business context.
 
-**Answer: A and B.** A preserves decision context while B makes data handling visible. C omits the compliance concern; D loses an opportunity to catch a material risk before implementation.
+**2. Select TWO.**
 
-**3. Select ONE.** An executive proposes that an internal assistant “meet a 99.99% SLA.” What should the architect do first?
+A durable architecture choice between live policy retrieval and a static prompt copy must be reviewed by developers and compliance. Which two actions best support that review?
 
-A. Accept the target because higher is always better.  
-B. Convert it into a user-relevant SLI, define the population/window and response to violation, then review cost and business impact with owners.  
-C. Replace it with model accuracy.  
-D. Promise it for API uptime and assume users interpret it the same way.
+- **A.** Record the decision, rationale, alternatives, consequences, status, and reconsideration trigger in an ADR.
+- **B.** Share a data-flow view showing source, access boundary, freshness, and model context.
+- **C.** Send only a cost estimate because compliance can infer data movement.
+- **D.** Wait until production and reconstruct why the design was chosen.
 
-**Answer: B.** A service commitment needs precise measurement and a consequence, and its target reflects business trade-offs. A can be wasteful or undefined; C is a different quality dimension; D silently conflates availability with user success.
+**Answer: A and B.**
 
-**4. Select ONE.** A retrieval assistant meets latency targets but customer-support agents report that citations often point to retired policy pages. What is the best feedback-loop response?
+A preserves decision context while B makes data handling visible. C omits the compliance concern; D loses an opportunity to catch a material risk before implementation.
 
-A. Tune the model’s temperature until agents stop noticing.  
-B. Add a freshness/provenance measure, sample incidents with agents and policy owners, correct indexing/retirement controls, then verify in a staged release.  
-C. Increase the uptime target.  
-D. Tell agents to ignore citations.
+**3. Select ONE.**
 
-**Answer: B.** The reported issue is source currency and trust, so it needs a measurable signal, joint diagnosis, remediation, and reevaluation. A does not address stale evidence; C measures the wrong property; D discards a safety aid.
+An executive proposes that an internal assistant “meet a 99.99% SLA.” What should the architect do first?
 
-**5. Select ONE.** A team is handing a Claude-based triage service to operations. Which handoff item is most critical to add to an architecture diagram?
+- **A.** Accept the target because higher is always better.
+- **B.** Convert it into a user-relevant SLI, define the population/window and response to violation, then review cost and business impact with owners.
+- **C.** Replace it with model accuracy.
+- **D.** Promise it for API uptime and assume users interpret it the same way.
 
-A. The preferred color palette for dashboards.  
-B. Failure modes, alert ownership, runbook and rollback steps, and the thresholds that trigger them.  
-C. A list of model names without versioning.  
-D. A copy of the original workshop transcript.
+**Answer: B.**
 
-**Answer: B.** The operator needs actionable ownership and recovery guidance. A and D may be useful in context but do not enable incident response; C is incomplete without change and rollback policy.
+A service commitment needs precise measurement and a consequence, and its target reflects business trade-offs. A can be wasteful or undefined; C is a different quality dimension; D silently conflates availability with user success.
 
-**6. Select THREE.** A pilot’s answer acceptance is lower for Spanish-language cases, even though aggregate quality meets the launch target. What should the lifecycle review include?
+**4. Select ONE.**
 
-A. Segment the metric by language and case type and validate sample size and labeling.  
-B. Interview affected users and inspect representative failures with a domain reviewer.  
-C. Continue rollout because the aggregate target passes.  
-D. Record the risk, decide whether to narrow or pause scope, and define a retest/rollout condition.  
-E. Remove the language field from reports to avoid biasing future decisions.
+A retrieval assistant meets latency targets but customer-support agents report that citations often point to retired policy pages. What is the best feedback-loop response?
 
-**Answer: A, B, and D.** Segmentation reveals a hidden disparity, user and expert review explains it, and a documented scope decision plus retest condition makes iteration controlled. C ignores the subgroup; E hides relevant evidence.
+- **A.** Tune the model’s temperature until agents stop noticing.
+- **B.** Add a freshness/provenance measure, sample incidents with agents and policy owners, correct indexing/retirement controls, then verify in a staged release.
+- **C.** Increase the uptime target.
+- **D.** Tell agents to ignore citations.
+
+**Answer: B.**
+
+The reported issue is source currency and trust, so it needs a measurable signal, joint diagnosis, remediation, and reevaluation. A does not address stale evidence; C measures the wrong property; D discards a safety aid.
+
+**5. Select ONE.**
+
+A team is handing a Claude-based triage service to operations. Which handoff item is most critical to add to an architecture diagram?
+
+- **A.** The preferred color palette for dashboards.
+- **B.** Failure modes, alert ownership, runbook and rollback steps, and the thresholds that trigger them.
+- **C.** A list of model names without versioning.
+- **D.** A copy of the original workshop transcript.
+
+**Answer: B.**
+
+The operator needs actionable ownership and recovery guidance. A and D may be useful in context but do not enable incident response; C is incomplete without change and rollback policy.
+
+**6. Select THREE.**
+
+A pilot’s answer acceptance is lower for Spanish-language cases, even though aggregate quality meets the launch target. What should the lifecycle review include?
+
+- **A.** Segment the metric by language and case type and validate sample size and labeling.
+- **B.** Interview affected users and inspect representative failures with a domain reviewer.
+- **C.** Continue rollout because the aggregate target passes.
+- **D.** Record the risk, decide whether to narrow or pause scope, and define a retest/rollout condition.
+- **E.** Remove the language field from reports to avoid biasing future decisions.
+
+**Answer: A, B, and D.**
+
+Segmentation reveals a hidden disparity, user and expert review explains it, and a documented scope decision plus retest condition makes iteration controlled. C ignores the subgroup; E hides relevant evidence.
 
 ## Objective checklist
 

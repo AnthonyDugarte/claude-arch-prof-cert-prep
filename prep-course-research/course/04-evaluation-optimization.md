@@ -84,14 +84,80 @@ For each case record `case_id`, `split`, `expected_behavior`, `authorized_curren
 
 ## Original practice questions — not official exam content
 
-**1. Select ONE.** A policy assistant's citation accuracy falls after re-indexing. The prompt and model are unchanged. What is the best first investigation? A. Increase temperature. B. Inspect index version and retrieved passage IDs in failing traces. C. Increase `max_tokens`. D. Rewrite the system prompt. **Answer: B.** A changes variability without addressing the refresh boundary. B checks the component that changed and the evidence sent. C helps only if output was truncated. D might be needed later if correct evidence was present but ignored.
+**1. Select ONE.**
 
-**2. Select TWO.** A team wants a reliable pre-release evaluation for an agent that updates CRM records. Which two checks best cover task success and risk? A. Verify final CRM state with deterministic assertions. B. Grade only response tone with an LLM judge. C. Include multi-turn traces and repeated trials. D. Compare average response length only. **Answers: A and C.** A verifies actual outcome. B captures one quality dimension but misses state and authorization. C detects path variation and compounding tool errors. D is an efficiency measure, not task success.
+A policy assistant's citation accuracy falls after re-indexing. The prompt and model are unchanged. What is the best first investigation?
 
-**3. Select ONE.** A team has a prespecified promotion gate forbidding an increase in unauthorized tool attempts. A candidate prompt improves offline rubric scores by 3 points but doubles those attempts, although the executor blocks them. What should the architect do? A. Release because quality rose. B. Block promotion under the security gate and diagnose attempted calls. C. Hide attempts by retrying. D. Switch the rubric judge. **Answer: B.** A ignores a hard constraint. B preserves the gate and investigates a concrete failure. C conceals risk and may increase it. D is justified only if calibration evidence shows judge error, which does not explain logged tool attempts.
+- **A.** Increase temperature.
+- **B.** Inspect index version and retrieved passage IDs in failing traces.
+- **C.** Increase `max_tokens`.
+- **D.** Rewrite the system prompt.
 
-**4. Select TWO.** A common 12,000-token policy prefix is sent for each interactive request. Quality is stable; cost is high. Which two measurements or changes are most informative? A. Put changing timestamps before the policy. B. Cache the stable prefix and inspect cache-read/write usage. C. Measure cost per successful task and p95 latency after the change. D. Remove half the policy without testing. **Answers: B and C.** A breaks prefix reuse. B uses the documented mechanism and verifies hits. C checks business and user impact. D risks losing decisive rules.
+**Answer: B.**
 
-**5. Select ONE.** A completion ends mid-sentence and the API reports `stop_reason=max_tokens`. What is the first targeted correction? A. Raise or reallocate the output cap, then rerun the affected cases. B. Re-index documents. C. Remove citation checks. D. Increase sampling temperature. **Answer: A.** A addresses the observed stop condition and tests its cost. B concerns evidence retrieval. C weakens evaluation. D does not repair truncation.
+A changes variability without addressing the refresh boundary. B checks the component that changed and the evidence sent. C helps only if output was truncated. D might be needed later if correct evidence was present but ignored.
 
-**6. Select TWO.** A/B traffic is enough for an experiment on a new retrieval strategy. Which practices support a credible decision? A. Prespecify primary metric and safety guardrails. B. Reassign each user to a fresh variant every turn. C. Keep assignment stable and compare eligible traffic including fallbacks. D. Stop as soon as one favorable hourly chart appears. **Answers: A and C.** A limits after-the-fact metric shopping and protects hard constraints. B contaminates repeated-session outcomes. C keeps exposure coherent and captures failures. D amplifies noise and selection bias.
+**2. Select TWO.**
+
+A team wants a reliable pre-release evaluation for an agent that updates CRM records. Which two checks best cover task success and risk?
+
+- **A.** Verify final CRM state with deterministic assertions.
+- **B.** Grade only response tone with an LLM judge.
+- **C.** Include multi-turn traces and repeated trials.
+- **D.** Compare average response length only.
+
+**Answers: A and C.**
+
+A verifies actual outcome. B captures one quality dimension but misses state and authorization. C detects path variation and compounding tool errors. D is an efficiency measure, not task success.
+
+**3. Select ONE.**
+
+A team has a prespecified promotion gate forbidding an increase in unauthorized tool attempts. A candidate prompt improves offline rubric scores by 3 points but doubles those attempts, although the executor blocks them. What should the architect do?
+
+- **A.** Release because quality rose.
+- **B.** Block promotion under the security gate and diagnose attempted calls.
+- **C.** Hide attempts by retrying.
+- **D.** Switch the rubric judge.
+
+**Answer: B.**
+
+A ignores a hard constraint. B preserves the gate and investigates a concrete failure. C conceals risk and may increase it. D is justified only if calibration evidence shows judge error, which does not explain logged tool attempts.
+
+**4. Select TWO.**
+
+A common 12,000-token policy prefix is sent for each interactive request. Quality is stable; cost is high. Which two measurements or changes are most informative?
+
+- **A.** Put changing timestamps before the policy.
+- **B.** Cache the stable prefix and inspect cache-read/write usage.
+- **C.** Measure cost per successful task and p95 latency after the change.
+- **D.** Remove half the policy without testing.
+
+**Answers: B and C.**
+
+A breaks prefix reuse. B uses the documented mechanism and verifies hits. C checks business and user impact. D risks losing decisive rules.
+
+**5. Select ONE.**
+
+A completion ends mid-sentence and the API reports `stop_reason=max_tokens`. What is the first targeted correction?
+
+- **A.** Raise or reallocate the output cap, then rerun the affected cases.
+- **B.** Re-index documents.
+- **C.** Remove citation checks.
+- **D.** Increase sampling temperature.
+
+**Answer: A.**
+
+A addresses the observed stop condition and tests its cost. B concerns evidence retrieval. C weakens evaluation. D does not repair truncation.
+
+**6. Select TWO.**
+
+A/B traffic is enough for an experiment on a new retrieval strategy. Which practices support a credible decision?
+
+- **A.** Prespecify primary metric and safety guardrails.
+- **B.** Reassign each user to a fresh variant every turn.
+- **C.** Keep assignment stable and compare eligible traffic including fallbacks.
+- **D.** Stop as soon as one favorable hourly chart appears.
+
+**Answers: A and C.**
+
+A limits after-the-fact metric shopping and protects hard constraints. B contaminates repeated-session outcomes. C keeps exposure coherent and captures failures. D amplifies noise and selection bias.

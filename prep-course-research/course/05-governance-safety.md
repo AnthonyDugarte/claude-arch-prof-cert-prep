@@ -80,14 +80,80 @@ Transparency has two audiences. Users need a plain explanation that AI assists t
 
 ## Original practice questions — not official exam content
 
-**1. Select ONE.** A read-only inventory analyst inherits a warehouse administrator tool bundle that can modify stock quantities. Quantity updates belong to a separate authorized workflow. What is the best initial configuration? A. Keep the bundle and monitor update calls. B. Expose only the inventory reads required for analysis. C. Let the model ask for confirmation on every quantity update. D. Give all users administrator credentials but restrict the prompt. **Answer: B.** A leaves unnecessary capability exposed. B matches the task authority. C adds a confirmation step to an operation this role does not need. D places a behavioral instruction over excessive credentials.
+**1. Select ONE.**
 
-**2. Select TWO.** A trusted analyst asks an agent to summarize a web page. The page contains instructions to export internal records. Which two measures address the threat? A. Treat page text as untrusted tool content. B. Give the agent a broader export permission so it can finish. C. Enforce least-privilege tool access outside the model. D. Assume the analyst's trust makes page content safe. **Answers: A and C.** A preserves the trust boundary. B increases blast radius. C bounds actions even if the model is misled. D confuses user identity with the source of retrieved content.
+A read-only inventory analyst inherits a warehouse administrator tool bundle that can modify stock quantities. Quantity updates belong to a separate authorized workflow. What is the best initial configuration?
 
-**3. Select ONE.** A model recommends denying an appeal and the UI shows an “Approve” button with no evidence or override path. What is the main oversight weakness? A. The button is too small. B. Reviewers cannot exercise informed, effective judgment. C. The model should make the decision automatically. D. More verbose model output is enough. **Answer: B.** A is possible usability work but misses control substance. B identifies absent evidence and authority. C removes oversight. D can add text yet still lack sources, correction, and accountability.
+- **A.** Keep the bundle and monitor update calls.
+- **B.** Expose only the inventory reads required for analysis.
+- **C.** Let the model ask for confirmation on every quantity update.
+- **D.** Give all users administrator credentials but restrict the prompt.
 
-**4. Select TWO.** A hospital plans to process ePHI through a Claude-based application. Which two items must be verified before real-data use? A. Applicable BAA and supported API feature scope. B. Whether all connected tools and data flows are covered by the organization's risk analysis. C. That the prompt says “HIPAA compliant.” D. That a model refuses unsafe requests in five samples. **Answers: A and B.** A follows HHS and Anthropic's arrangement/eligibility guidance. B captures the complete system and third parties. C has no contractual or technical force. D is too narrow and cannot establish HIPAA compliance.
+**Answer: B.**
 
-**5. Select ONE.** A federal team says an AI app is FedRAMP covered because its database runs on a certified cloud service. What is the best response? A. Accept the claim. B. Check the use-case scope, specific offering and boundary, inherited/customer controls, and agency authorization. C. Ask Claude to self-certify. D. Treat public and non-public federal data identically. **Answer: B.** A assumes certification transfers to added services. B follows FedRAMP's scoped, shared-responsibility model. C has no authority. D ignores data and use-case differences.
+A leaves unnecessary capability exposed. B matches the task authority. C adds a confirmation step to an operation this role does not need. D places a behavioral instruction over excessive credentials.
 
-**6. Select TWO.** A triage model's overall accuracy is 94%, but complaints cluster among non-English users. What should the architect do? A. Segment error and escalation metrics by language and investigate labels and coverage. B. Declare fairness proven by the overall score. C. Provide a clear correction/escalation route and test the affected workflow with experts. D. Hide the use of AI to reduce complaints. **Answers: A and C.** A identifies the disparity and likely causes. B hides subgroup harm. C supplies recourse and context-sensitive validation. D reduces transparency without addressing quality.
+**2. Select TWO.**
+
+A trusted analyst asks an agent to summarize a web page. The page contains instructions to export internal records. Which two measures address the threat?
+
+- **A.** Treat page text as untrusted tool content.
+- **B.** Give the agent a broader export permission so it can finish.
+- **C.** Enforce least-privilege tool access outside the model.
+- **D.** Assume the analyst's trust makes page content safe.
+
+**Answers: A and C.**
+
+A preserves the trust boundary. B increases blast radius. C bounds actions even if the model is misled. D confuses user identity with the source of retrieved content.
+
+**3. Select ONE.**
+
+A model recommends denying an appeal and the UI shows an “Approve” button with no evidence or override path. What is the main oversight weakness?
+
+- **A.** The button is too small.
+- **B.** Reviewers cannot exercise informed, effective judgment.
+- **C.** The model should make the decision automatically.
+- **D.** More verbose model output is enough.
+
+**Answer: B.**
+
+A is possible usability work but misses control substance. B identifies absent evidence and authority. C removes oversight. D can add text yet still lack sources, correction, and accountability.
+
+**4. Select TWO.**
+
+A hospital plans to process ePHI through a Claude-based application. Which two items must be verified before real-data use?
+
+- **A.** Applicable BAA and supported API feature scope.
+- **B.** Whether all connected tools and data flows are covered by the organization's risk analysis.
+- **C.** That the prompt says “HIPAA compliant.”
+- **D.** That a model refuses unsafe requests in five samples.
+
+**Answers: A and B.**
+
+A follows HHS and Anthropic's arrangement/eligibility guidance. B captures the complete system and third parties. C has no contractual or technical force. D is too narrow and cannot establish HIPAA compliance.
+
+**5. Select ONE.**
+
+A federal team says an AI app is FedRAMP covered because its database runs on a certified cloud service. What is the best response?
+
+- **A.** Accept the claim.
+- **B.** Check the use-case scope, specific offering and boundary, inherited/customer controls, and agency authorization.
+- **C.** Ask Claude to self-certify.
+- **D.** Treat public and non-public federal data identically.
+
+**Answer: B.**
+
+A assumes certification transfers to added services. B follows FedRAMP's scoped, shared-responsibility model. C has no authority. D ignores data and use-case differences.
+
+**6. Select TWO.**
+
+A triage model's overall accuracy is 94%, but complaints cluster among non-English users. What should the architect do?
+
+- **A.** Segment error and escalation metrics by language and investigate labels and coverage.
+- **B.** Declare fairness proven by the overall score.
+- **C.** Provide a clear correction/escalation route and test the affected workflow with experts.
+- **D.** Hide the use of AI to reduce complaints.
+
+**Answers: A and C.**
+
+A identifies the disparity and likely causes. B hides subgroup harm. C supplies recourse and context-sensitive validation. D reduces transparency without addressing quality.

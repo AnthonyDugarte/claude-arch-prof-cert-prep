@@ -86,60 +86,84 @@ Choose the lightest mechanism that meets the requirement. If behavior must happe
 
 These questions are original study exercises, not official exam items.
 
-**1. Select ONE.** A team commits one developer’s `.claude/settings.local.json` because “that is where our test permission already works.” What is the best correction?
+**1. Select ONE.**
 
-A. Move shared, reviewed defaults to `.claude/settings.json`; keep personal overrides in the local file and out of version control.  
-B. Move the file to `~/.claude/settings.json` and require all developers to copy it.  
-C. Put API keys and permissions together in `CLAUDE.md`.  
-D. Run Claude Code in bypass mode so file scope no longer matters.
+A team commits one developer’s `.claude/settings.local.json` because “that is where our test permission already works.” What is the best correction?
 
-**Answer: A.** Shared project settings are designed for team-shared configuration; local settings are personal. B lacks repository-specific controlled rollout; C exposes secrets and treats prose as settings; D removes prompts and does not solve configuration ownership.
+- **A.** Move shared, reviewed defaults to `.claude/settings.json`; keep personal overrides in the local file and out of version control.
+- **B.** Move the file to `~/.claude/settings.json` and require all developers to copy it.
+- **C.** Put API keys and permissions together in `CLAUDE.md`.
+- **D.** Run Claude Code in bypass mode so file scope no longer matters.
 
-**2. Select TWO.** A team needs formatting after every edit and also needs Claude to understand how to run a rare database migration. Which pairing is best?
+**Answer: A.**
 
-A. Use a tested PostToolUse hook for the deterministic formatter.  
-B. Put the migration procedure in a skill or focused instruction file invoked when needed.  
-C. Put both procedures only in a system prompt sentence.  
-D. Add a broad allow rule for every Bash command.
+Shared project settings are designed for team-shared configuration; local settings are personal. B lacks repository-specific controlled rollout; C exposes secrets and treats prose as settings; D removes prompts and does not solve configuration ownership.
 
-**Answer: A and B.** Formatting is repeatable and should run deterministically; migration guidance is conditional knowledge and can be loaded on demand. C is neither enforceable nor scoped; D grants far more authority than needed.
+**2. Select TWO.**
 
-**3. Select ONE.** A managed organization policy disables permission bypass, but a developer says `--settings` restored it. What should the architect conclude?
+A team needs formatting after every edit and also needs Claude to understand how to run a rare database migration. Which pairing is best?
 
-A. CLI arguments always have highest precedence.  
-B. Verify the loaded managed source and effective state; organization-managed policy takes precedence over ordinary user/project settings and session overrides, subject to documented exceptions.  
-C. Remove the project settings file.  
-D. Assume the developer’s behavior is impossible and close the incident.
+- **A.** Use a tested PostToolUse hook for the deterministic formatter.
+- **B.** Put the migration procedure in a skill or focused instruction file invoked when needed.
+- **C.** Put both procedures only in a system prompt sentence.
+- **D.** Add a broad allow rule for every Bash command.
 
-**Answer: B.** Settings precedence places managed policy above CLI and local files; checking `/status` and `claude doctor` grounds the diagnosis. A is false; C is unrelated; D ignores possible stale version, other launch environment, or misreported state.
+**Answer: A and B.**
 
-**4. Select ONE.** A hook is intended to block `git push`, but the push still runs when the script cannot be found. What is the strongest next step?
+Formatting is repeatable and should run deterministically; migration guidance is conditional knowledge and can be loaded on demand. C is neither enforceable nor scoped; D grants far more authority than needed.
 
-A. Treat a missing hook as a configuration defect: verify the path, matcher and executable state, test in a controlled session, and confirm documented blocking semantics before rollout.  
-B. Add “never push” to `CLAUDE.md`.  
-C. Assume any nonzero script exit always blocks.  
-D. Grant all Git commands automatically so Claude can retry.
+**3. Select ONE.**
 
-**Answer: A.** Hook behavior depends on event and exit/output semantics; a missing hook can fail non-blockingly. B is instruction, not enforcement; C is false for typical events; D worsens the permission surface.
+A managed organization policy disables permission bypass, but a developer says `--settings` restored it. What should the architect conclude?
 
-**5. Select ONE.** Developers say an AI coding rollout is “twice as productive” because generated lines doubled. Which evaluation plan is stronger?
+- **A.** CLI arguments always have highest precedence.
+- **B.** Verify the loaded managed source and effective state; organization-managed policy takes precedence over ordinary user/project settings and session overrides, subject to documented exceptions.
+- **C.** Remove the project settings file.
+- **D.** Assume the developer’s behavior is impossible and close the incident.
 
-A. Keep lines generated as the sole KPI.  
-B. Compare a defined task’s cycle time and review rework or defect rate, collect developer feedback, and track cost with a baseline.  
-C. Count prompts per developer.  
-D. Compare the largest user’s output volume across two weeks.
+**Answer: B.**
 
-**Answer: B.** It includes outcome, quality, user experience, and cost with a comparison baseline. A, C, and D are activity measures that can rise without useful delivery.
+Settings precedence places managed policy above CLI and local files; checking `/status` and `claude doctor` grounds the diagnosis. A is false; C is unrelated; D ignores possible stale version, other launch environment, or misreported state.
 
-**6. Select THREE.** One developer gets a different Claude Code permission prompt and reports that a required hook did not run. What should you inspect first?
+**4. Select ONE.**
 
-A. Installed Claude Code version and launch directory/project trust.  
-B. `/status` and `claude doctor` to identify loaded settings and configuration errors.  
-C. Hook event/matcher, script path/permissions, and a controlled debug reproduction.  
-D. Immediately disable all organization rules.  
-E. Approve unrestricted Bash as a temporary permanent fix.
+A hook is intended to block `git push`, but the push still runs when the script cannot be found. What is the strongest next step?
 
-**Answer: A, B, and C.** Version and working context can affect behavior; loaded sources and validation output reveal policy state; hook configuration plus a controlled reproduction isolates the failure. D discards governance without diagnosis; E expands access and masks the issue.
+- **A.** Treat a missing hook as a configuration defect: verify the path, matcher and executable state, test in a controlled session, and confirm documented blocking semantics before rollout.
+- **B.** Add “never push” to `CLAUDE.md`.
+- **C.** Assume any nonzero script exit always blocks.
+- **D.** Grant all Git commands automatically so Claude can retry.
+
+**Answer: A.**
+
+Hook behavior depends on event and exit/output semantics; a missing hook can fail non-blockingly. B is instruction, not enforcement; C is false for typical events; D worsens the permission surface.
+
+**5. Select ONE.**
+
+Developers say an AI coding rollout is “twice as productive” because generated lines doubled. Which evaluation plan is stronger?
+
+- **A.** Keep lines generated as the sole KPI.
+- **B.** Compare a defined task’s cycle time and review rework or defect rate, collect developer feedback, and track cost with a baseline.
+- **C.** Count prompts per developer.
+- **D.** Compare the largest user’s output volume across two weeks.
+
+**Answer: B.**
+
+It includes outcome, quality, user experience, and cost with a comparison baseline. A, C, and D are activity measures that can rise without useful delivery.
+
+**6. Select THREE.**
+
+One developer gets a different Claude Code permission prompt and reports that a required hook did not run. What should you inspect first?
+
+- **A.** Installed Claude Code version and launch directory/project trust.
+- **B.** `/status` and `claude doctor` to identify loaded settings and configuration errors.
+- **C.** Hook event/matcher, script path/permissions, and a controlled debug reproduction.
+- **D.** Immediately disable all organization rules.
+- **E.** Approve unrestricted Bash as a temporary permanent fix.
+
+**Answer: A, B, and C.**
+
+Version and working context can affect behavior; loaded sources and validation output reveal policy state; hook configuration plus a controlled reproduction isolates the failure. D discards governance without diagnosis; E expands access and masks the issue.
 
 ## Objective checklist
 
