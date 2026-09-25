@@ -33,7 +33,7 @@ Date: 2026-09-24. Independent reports are preserved as findings against the vers
 | Find preparation resources | Orientation links official Professional path, public Academy catalog/syllabus and technical readings; access limits in guide register |
 | Define concepts with example situations | Explicit objective sections, scenario comparisons, worked calculations and original decision practice in each module |
 | Professional focus on tradeoffs and established approaches | Alternatives tables, “when another wins” reasoning, professional casebook, capstone and failure exercises; primary engineering/specification sources |
-| Keep this team's results in a subfolder | Course, research, reviews, indexes and audit utility all in `prep-course-research/`; original guide left intact |
+| Keep this team's results in a subfolder at initial handoff | Originally delivered in `prep-course-research/`; promoted to the repository root at the user's request on 2026-09-25. The original guide remains intact |
 | Track referenced material | `references.md` deduplicates external URLs and backlinks; registers record dates, exact queries, claim support and access/uncertainty |
 
 ## Verification limits
@@ -44,4 +44,4 @@ The structural checker verifies expected objective headings, item counts, answer
 
 All three independent roles rechecked the revised files and appended closure to their own reports on 2026-09-24. The educational reviewer closed every original finding; the validator closed both integration findings; the adversarial reviewer closed both must-fix findings and all four optional improvements. No reported must-fix remains open.
 
-Final command: `python3 prep-course-research/tools/audit_materials.py --write-indexes`. Result: **38 objective headings, 42 module questions, 14 advanced questions, 64 distinct external URLs; structural audit passed**. An additional cross-check found **no course URL absent from the research registers**. The final pack contains 23 Markdown files plus the audit utility. The source guide's SHA-256 at handoff is `fc67cf6a30b963879bb26a40ed93d4e0ed008a58f03a15cd747e42ec2e39ae74` for later version comparison.
+Final command: `python3 tools/audit_materials.py --write-indexes`. Result: **38 objective headings, 42 module questions, 14 advanced questions, 64 distinct external URLs; structural audit passed**. An additional cross-check found **no course URL absent from the research registers**. The final pack contains 23 Markdown files plus the audit utility. The source guide's SHA-256 at handoff is `fc67cf6a30b963879bb26a40ed93d4e0ed008a58f03a15cd747e42ec2e39ae74` for later version comparison.

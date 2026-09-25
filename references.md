@@ -10,7 +10,7 @@ Use the source registers for source IDs, actual queries, claim support, access s
 - [Domains 6–7](research/domains-6-7.md)
 - [Independent source validation](reviews/validator.md)
 
-The supplied [exam guide](../claude-arch-professional-guide.md) supplies blueprint/policy statements. Official platform and protocol documentation supplies technical behavior; regulatory agencies supply their own guidance. Worked scenarios and recommendations are original synthesis. Indexed-only Partner Academy pages are flagged in the guide register; failed opens are not treated as verified page contents. Recheck product limits, settings, contracts, eligibility and program policies before relying on them operationally.
+The supplied [exam guide](claude-arch-professional-guide.md) supplies blueprint/policy statements. Official platform and protocol documentation supplies technical behavior; regulatory agencies supply their own guidance. Worked scenarios and recommendations are original synthesis. Indexed-only Partner Academy pages are flagged in the guide register; failed opens are not treated as verified page contents. Recheck product limits, settings, contracts, eligibility and program policies before relying on them operationally.
 
 ## URL inventory (64 distinct URLs; fragments collapsed)
 

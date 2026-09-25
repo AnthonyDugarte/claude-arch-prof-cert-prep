@@ -1,6 +1,6 @@
 # Domain 5 — Governance, Safety & Risk Management
 
-**Blueprint weight:** 14%. **Objectives:** D5.1 implement guardrails and safety controls; D5.2 identify LLM risks, limitations, and failure modes; D5.3 apply human-in-the-loop validation; D5.4 address GDPR, HIPAA, and FedRAMP requirements; D5.5 address bias, fairness, and transparency. The supplied [exam guide](../../claude-arch-professional-guide.md) names these topics but does not prescribe a universal control set. This module gives architectural study guidance, not legal advice or a claim that any design is compliant. The practice questions are original, not official exam content.
+**Blueprint weight:** 14%. **Objectives:** D5.1 implement guardrails and safety controls; D5.2 identify LLM risks, limitations, and failure modes; D5.3 apply human-in-the-loop validation; D5.4 address GDPR, HIPAA, and FedRAMP requirements; D5.5 address bias, fairness, and transparency. The supplied [exam guide](../claude-arch-professional-guide.md) names these topics but does not prescribe a universal control set. This module gives architectural study guidance, not legal advice or a claim that any design is compliant. The practice questions are original, not official exam content.
 
 ## Start with use, assets, and authority
 

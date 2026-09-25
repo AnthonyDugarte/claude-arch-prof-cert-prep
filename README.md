@@ -1,15 +1,15 @@
 # Claude Certified Architect – Professional: preparation course
 
-This is an independent preparation pack for **CCAR-P**, aligned to the user-supplied [exam guide](../claude-arch-professional-guide.md), version 1.0, effective July 2026. Research date: **2026-09-24**. It teaches production architecture decisions, with original scenarios and exercises. It is not an Anthropic course or a source of live exam questions.
+This is an independent preparation pack for **CCAR-P**, aligned to the user-supplied [exam guide](claude-arch-professional-guide.md), version 1.0, effective July 2026. Research date: **2026-09-24**. It teaches production architecture decisions, with original scenarios and exercises. It is not an Anthropic course or a source of live exam questions.
 
-All work from this research team lives in this folder for later consolidation. The supplied guide remains the blueprint authority for this pack. Product documentation supplies technical facts; examples, thresholds, schedules, and architectural recommendations are teaching material unless explicitly attributed.
+This repository contains the course, its source research, and independent review records. The supplied guide remains the blueprint authority. Product documentation supplies technical facts; examples, thresholds, schedules, and architectural recommendations are teaching material unless explicitly attributed.
 
 ## Start here
 
 1. Read [orientation and preparation resources](course/00-orientation.md). Identify your weakest objectives using the [coverage map](coverage-map.md).
 2. Study each module, explain the rejected alternatives aloud, and complete its exercise before reading its practice answer key.
 3. Work through the [14 advanced decision cases](course/10-advanced-casebook.md), then complete the [integrated capstone](course/08-capstone.md) and use the [decision templates](course/09-decision-templates.md) to defend the design.
-4. Revisit missed objectives and the actual guide's three sample questions. Read [research and review provenance](CONSOLIDATION.md) before combining this material with another course.
+4. Revisit missed objectives and the actual guide's three sample questions. Consult the [research and review provenance](PROVENANCE.md) for source boundaries and validation history.
 
 | Module | Blueprint weight | What you must be able to defend |
 |---|---:|---|
@@ -30,3 +30,24 @@ For an experienced engineer, reserve an illustrative **40 hours**, adjusting aft
 For every decision, practice this five-part answer: **constraint → viable options → choice → cost/risk accepted → evidence that would change the choice**. A response that names a feature without explaining its boundary or rejected alternative is incomplete at this level.
 
 Readiness means you can diagnose a failing system, defend alternatives, identify missing evidence, and operate the controls. The original module exercises and questions are learning checks; they do not estimate the official scaled score.
+
+## Repository layout and maintenance
+
+- `course/`: orientation, seven domain modules, capstone, templates, and advanced practice.
+- `research/`: dedicated searches and source registers with access dates and limitations.
+- `reviews/`: independent reviews, corrections, and validation history.
+- `tools/`: the structural audit and navigation-index generator.
+- [references.md](references.md): linked source inventory.
+- [coverage-map.md](coverage-map.md): all 38 blueprint objectives mapped to teaching sections.
+
+From the repository root, check objective coverage, question counts, answer-selection counts, and local links:
+
+```sh
+python3 tools/audit_materials.py
+```
+
+After changing references or module headings, regenerate the indexes and run the same checks:
+
+```sh
+python3 tools/audit_materials.py --write-indexes
+```

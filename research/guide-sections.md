@@ -1,6 +1,6 @@
 # Dedicated search log: all numbered guide sections
 
-Research date: 2026-09-24. Scope: Sections 1–16 of the user-supplied [CCAR-P guide](../../claude-arch-professional-guide.md). The seven technical domain searches are separately recorded in this folder. Queries below were actually submitted; related queries were batched without treating them as interchangeable.
+Research date: 2026-09-24. Scope: Sections 1–16 of the user-supplied [CCAR-P guide](../claude-arch-professional-guide.md). The seven technical domain searches are separately recorded in this folder. Queries below were actually submitted; related queries were batched without treating them as interchangeable.
 
 Evidence labels: **opened** = page body retrieved; **indexed only** = first-party search result text, direct page failed; **local guide** = supplied content, not independently verified online; **not established** = research did not establish the specific claim. A failed fetch does not show a resource is absent. Third-party exam summaries and candidate reports appeared in results but were not used as technical or policy authority.
 
@@ -8,7 +8,7 @@ Evidence labels: **opened** = page body retrieved; **indexed only** = first-part
 
 | ID | Resource | Retrieval and use |
 |---|---|---|
-| G | [Supplied exam guide](../../claude-arch-professional-guide.md) | Read in full; authoritative blueprint for requested course |
+| G | [Supplied exam guide](../claude-arch-professional-guide.md) | Read in full; authoritative blueprint for requested course |
 | P1 | [Anthropic-issued Professional badge](https://www.credly.com/org/anthropic/badge/claude-certified-architect-professional) | Opened; corroborates credential, enterprise architecture scope and proctored exam criterion |
 | P2 | [Anthropic program announcement](https://claude.com/blog/four-role-based-claude-certifications) | Opened; professional scope, Pearson delivery, Partner Network access |
 | P3 | [Professional prep path](https://anthropic-partners.skilljar.com/path/claude-certified-architect-professional) | Indexed only; direct open returned 403 twice; curriculum overview, not audited lessons |

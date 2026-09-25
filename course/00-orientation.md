@@ -2,7 +2,7 @@
 
 ## The scope of this course
 
-The [supplied guide](../../claude-arch-professional-guide.md) describes a practitioner who owns the lifecycle of a Claude system. Read its Sections 1–4 together: individual prompt fluency is insufficient. The candidate must connect business value, architecture, implementation, evaluation, security, and operations. Its recommended experience is three or more years in architecture/platform work and six or more months with production LLM systems; these are recommendations, not mandatory prerequisites.
+The [supplied guide](../claude-arch-professional-guide.md) describes a practitioner who owns the lifecycle of a Claude system. Read its Sections 1–4 together: individual prompt fluency is insufficient. The candidate must connect business value, architecture, implementation, evaluation, security, and operations. Its recommended experience is three or more years in architecture/platform work and six or more months with production LLM systems; these are recommendations, not mandatory prerequisites.
 
 Use this baseline check before studying. Can you explain why a workflow beats an agent in one task, but loses in another? Trace user identity from request to a retrieved document and a tool side effect? Distinguish a retrieval miss from unsupported generation? Estimate cost per accepted task including retries and human review? Name the owner who can stop an unsafe release? If any answer is vague, prioritize the corresponding module and lab.
 

@@ -36,7 +36,7 @@ If traffic is too low, a paired offline comparison with blinded expert review or
 
 ## D4.4 — Diagnose before changing the model
 
-Use the **first failing boundary**. For each bad answer, inspect the user request, retrieval query, top passages and version stamps, context actually sent, tool calls/results, `stop_reason`, and final output. A sudden confident error after a document refresh, with stable model and latency, points first to ingestion, indexing, or retrieval. That is also the inference behind the guide's Domain 4 sample question. [Exam guide, §8](../../claude-arch-professional-guide.md) is the supplied blueprint; [Claude Platform, “Reduce hallucinations”](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations) documents that model answers can be incorrect even when fluent.
+Use the **first failing boundary**. For each bad answer, inspect the user request, retrieval query, top passages and version stamps, context actually sent, tool calls/results, `stop_reason`, and final output. A sudden confident error after a document refresh, with stable model and latency, points first to ingestion, indexing, or retrieval. That is also the inference behind the guide's Domain 4 sample question. [Exam guide, §8](../claude-arch-professional-guide.md) is the supplied blueprint; [Claude Platform, “Reduce hallucinations”](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations) documents that model answers can be incorrect even when fluent.
 
 | Symptom | First checks | When a different intervention wins |
 |---|---|---|
